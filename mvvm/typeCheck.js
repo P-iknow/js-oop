@@ -9,6 +9,9 @@ const type = (target, type) => {
   return target;
 };
 
+// 예제
 const test = (arr, _ = type(arr, Array)) => {
   console.log(arr);
 };
+
+export default type;
