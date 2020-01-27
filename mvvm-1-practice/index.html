@@ -14,19 +14,3 @@
     </section>
   </body>
 </html>
-
-<script src="">
-  const scan = el => {
-    const item = new Set();
-    console.log(el);
-    item.add(el);
-    const stack = [el.firstElementChild];
-    let target;
-    while ((target = stack.pop())) {
-      console.log(target);
-      item.add(target);
-      if (target.firstElementChild) stack.push(target.firstElementChild);
-      if (target.nextElementSibling) stack.push(target.nextElementSibling);
-    }
-  };
-</script>
