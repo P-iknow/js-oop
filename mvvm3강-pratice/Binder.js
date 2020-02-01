@@ -24,7 +24,7 @@ export const Binder = class extends ViewModelListener {
   add(v, _ = type(v, BinderItem)) {
     this.#items.add(v);
   }
-  viewmodelUpdated(updated) {
+  viewmodelUpdated(updated, viewmodel) {
     const items = {};
     this.#items.forEach(item => {
       items[item.viewmodel] = [
@@ -41,7 +41,7 @@ export const Binder = class extends ViewModelListener {
     });
   }
   addProcessor(v, _0 = type(v, Processor)) {
-    this.#processors[v.cat] = v;
+    this.#processors[v.category] = v;
   }
   watch(viewmodel, _ = type(viewmodel, ViewModel)) {
     viewmodel.addListener(this);

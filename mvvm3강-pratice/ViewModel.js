@@ -95,7 +95,7 @@ const ViewModel = class extends ViewModelListener {
     this.#listeners.delete(v);
   }
   notify() {
-    this.#listeners.forEach(v => v.viewmodelUpdated(this.#isUpdated));
+    this.#listeners.forEach(v => v.viewmodelUpdated(this.#isUpdated, this));
   }
 };
 
