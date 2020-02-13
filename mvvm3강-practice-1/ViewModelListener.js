@@ -1,7 +1,7 @@
-const ViewModelListener = class {
-  viewmodelUpdated(updated, viewmodel) {
-    throw 'override';
+const ViewmodelListener = class {
+  viewmodelListener(viewmodel, isUpdated) {
+    throw 'this method should be overrided';
   }
 };
 
-export default ViewModelListener;
+export default ViewmodelListener;

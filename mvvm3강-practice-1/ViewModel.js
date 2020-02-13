@@ -1,5 +1,5 @@
 import ViewModelListener from './ViewModelListener';
-import tpye from './type';
+import type from './type';
 
 const ViewmodelValue = class {
   subkey;
