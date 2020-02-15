@@ -1,7 +1,7 @@
-import type from "./type.js";
-import ViewModel from "./ViewModel.js";
-import ViewModelListener from "./ViewModelListener.js";
-import Processor from "./Processor.js";
+import type from './type.js';
+import ViewModel from './ViewModel.js';
+import ViewModelListener from './ViewModelListener.js';
+import Processor from './Processor.js';
 
 export const BinderItem = class {
   el;
@@ -10,7 +10,7 @@ export const BinderItem = class {
     el,
     viewmodel,
     _0 = type(el, HTMLElement),
-    _1 = type(viewmodel, "string")
+    _1 = type(viewmodel, 'string')
   ) {
     this.el = el;
     this.viewmodel = viewmodel;
@@ -25,11 +25,12 @@ export const Binder = class extends ViewModelListener {
     this.#items.add(v);
   }
   viewmodelUpdated(updated, viewmodel) {
+    console.log('viewModelUpated in Binder');
     const items = {};
     this.#items.forEach(item => {
       items[item.viewmodel] = [
         type(viewmodel[item.viewmodel], ViewModel),
-        item.el
+        item.el,
       ];
     });
     updated.forEach(v => {
