@@ -1,5 +1,6 @@
 import ViewModel from './ViewModel.js';
 import Processor from './Processor.js';
+import { DomScanner } from './Scanner';
 import { DomVisitor } from './Visitor.js';
 
 const scanner = new DomScanner(new DomVisitor());
